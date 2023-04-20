@@ -35,10 +35,10 @@ Start by cloning this repository:
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-fto-app -t slack-samples/?
+$ slack create fto-app -t peoplesj/simple-fto
 
 # Change into this project directory
-$ cd my-fto-app
+$ cd fto-app
 ```
 
 ## Create a Link Trigger

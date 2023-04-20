@@ -8,6 +8,9 @@ export const RequestFTO = DefineFunction({
   source_file: "functions/request_fto.ts",
   input_parameters: {
     properties: {
+      interactivity: {
+        type: Schema.slack.types.interactivity,
+      },
       manager: {
         type: Schema.slack.types.user_id,
         description: "The approving manager",
@@ -79,9 +82,24 @@ export default SlackFunction(
       ],
     });
 
+    const uuid = crypto.randomUUID();
+    const response = await client.apps.datastore.put({
+      datastore: "leave_requests",
+      item: {
+        id: uuid,
+        manager: inputs.interactivity?.interactor.id,
+        requester: inputs.employee,
+        start_date: inputs.start_date,
+        end_date: inputs.end_date,
+        reason: inputs.reason,
+      },
+    });
+
     if (!message.ok) {
       return { error: `Failed to send message: ${message.error}` };
+    } else {
+      console.log(`A new row saved: ${JSON.stringify(response)}`);
+      return { outputs: {} };
     }
-    return { outputs: {} };
   },
 );
