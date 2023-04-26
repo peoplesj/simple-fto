@@ -82,6 +82,7 @@ export default SlackFunction(
       ],
     });
 
+    // The apps.datastore.put method is used for both creating and updating an item in a datastore.
     const uuid = crypto.randomUUID();
     const response = await client.apps.datastore.put({
       datastore: "leave_requests",
