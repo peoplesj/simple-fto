@@ -37,7 +37,7 @@ export const RequestFTO = DefineFunction({
   },
 });
 
-// Send a message constructed with Block Kit message to the manager
+// Send a message constructed with Block Kit to the manager
 // View the message in block kit builder: https://app.slack.com/block-kit-builder/T5J4Q04QG#%7B%22blocks%22:%5B%7B%22type%22:%22header%22,%22text%22:%7B%22type%22:%22plain_text%22,%22text%22:%22A%20new%20time-off%20request%20has%20been%20submitted%22%7D%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*From*:%20%3C@$%7Bemployee%7D%3E%22%7D%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Dates:*%20$%7Bstart_date%7D%20to%20$%7Bend_date%7D%22%7D%7D,%7B%22type%22:%22section%22,%22text%22:%7B%22type%22:%22mrkdwn%22,%22text%22:%22*Reason:*%22%7D%7D%5D%7D
 export default SlackFunction(
   RequestFTO,

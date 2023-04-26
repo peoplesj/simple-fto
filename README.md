@@ -59,12 +59,13 @@ that Shortcut URLs will be different across each workspace, as well as between
 the Workspace that you'd like to create the Trigger in. Each Workspace has a
 development version (denoted by `(dev)`), as well as a deployed version.
 
-To create a Link Trigger for the Workflow in this sample, run the following
+To manually create a Link Trigger for the Workflow in this sample, run the following
 command:
 
 ```zsh
 $ slack trigger create --trigger-def triggers/greeting_trigger.ts
 ```
+Note: If you attempt to run or deploy your slack app without creating a trigger, the cli will prompt you to create one.
 
 After selecting a Workspace, the output provided will include the Link Trigger
 Shortcut URL. Copy and paste this URL into a channel as a message, or add it as
