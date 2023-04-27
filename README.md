@@ -1,4 +1,7 @@
 # Request FTO Slack App
+<img width="1010" alt="Screenshot 2023-04-27 at 8 42 03 AM" src="https://user-images.githubusercontent.com/105441105/234880919-b99d77b0-b516-42c6-82e7-a6ae08cdb7c7.png">
+
+
 
 Send and manage requests for FTO using the ROSI features of the Slack Platform!
 
